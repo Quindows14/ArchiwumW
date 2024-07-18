@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel logowania</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            max-width: 400px;
+            margin: 100px auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        h2 {
+            text-align: center;
+        }
+        input[type="text"],
+        input[type="password"],
+        input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Logowanie</h2>
+        <form action="home.html" method="post" id="loginForm">
+            <label for="username">Nazwa użytkownika:</label>
+            <input type="text" id="username" name="username" required>
+            <label for="password">Hasło:</label>
+            <input type="password" id="password" name="password" required>
+            <input type="submit" value="Zaloguj">
+        </form>
+    </div>
+
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            var username = document.getElementById('username').value;
+            var password = document.getElementById('password').value;
+
+            // Sprawdzanie poprawności danych logowania
+            var validLogin = false;
+
+            // Proste porównanie loginów i haseł
+            var credentials = [
+                { username: 'Robert', password: 'Dudziak2137' },
+                { username: 'user2', password: 'password2' },
+                { username: 'user3', password: 'password3' }
+            ];
+
+            credentials.forEach(function(credential) {
+                if (credential.username === username && credential.password === password) {
+                    validLogin = true;
+                }
+            });
+
+            if (validLogin) {
+                window.location.href = 'home.html'; // Przekierowanie do main.html
+            } else {
+                alert('Nieprawidłowa nazwa użytkownika lub hasło!');
+            }
+        });
+    </script>
+</body>
+</html>
