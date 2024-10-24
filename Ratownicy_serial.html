@@ -10,6 +10,7 @@
             margin: 0;
             padding: 0;
             background-color: #444;
+            color: #fff;
         }
 
         header {
@@ -32,78 +33,98 @@
         }
 
         nav a:hover {
-			color:#999;
+            color: #999;
         }
-		
-/* Style dla paska nawigacyjnego */
-		.navbar {
-			overflow: hidden;
-			background-color: #333;
-			position: fixed;
-			top: 460px;
-			left: auto;
-			right: 0;
-			width: 200px; /* Szerokość paska nawigacyjnego */
-			transform: translateY(-50%);
-			color: #fff
-		}
 
-/* Linki w pasku nawigacyjnym */
-		.navbar a {
-			display: block;
-			color: white;
-			text-align: center;
-			padding: 14px 20px;
-			text-decoration: none;
-			margin-bottom: 5px; /* Margines między linkami */
-			
-		}
-
-/* Zmień kolor linku po najechaniu na niego kursorem */
-		.navbar a:hover {
-			background-color: #ddd;
-			color: #000;
-		}
-		
-		.container {
+        .container {
             max-width: 800px;
             margin: 20px auto;
             padding: 20px;
-			color:#fff;
             background-color: #333;
         }
-			
-		
+
         h1 {
-            color: #333;
+            color: #fff;
         }
-		
+
+        .episodes {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            align-items: center;
+            margin-top: 20px;
+        }
+
+        .episode {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            border-bottom: 1px solid #555;
+            padding-bottom: 20px;
+        }
+
+        .episode img {
+            width: 300px;
+            height: 300px;
+            object-fit: cover;
+            border: 2px solid #fff;
+            border-radius: 10px;
+            transition: transform 0.3s, border-color 0.3s;
+        }
+
+        .episode img:hover {
+            transform: scale(1.1);
+            border-color: #999;
+        }
+
+        .episode .text {
+            flex: 1;
+            max-width: 400px;
+        }
+
+        .episode .text p {
+            margin: 0;
+        }
+
+        .episodes h2 {
+            text-align: center;
+            width: 100%;
+            border-bottom: 2px solid #fff;
+            padding-bottom: 10px;
+        }
     </style>
-    
 </head>
 <body>
     <header>
-
         <h1><span style="color: white">Archiwum W</span></h1>
     </header>
     <nav>
         <a href="home.html">Home</a>
-		<a href="Cymbaly_serial.html">Cymbały z Zakrętu</a>
-		<a href="Ratownicy_serial.html">Gryt</a>
-        
+        <a href="Cymbaly_serial.html">Cymbały z Zakrętu</a>
+        <a href="Ratownicy_serial.html">Gry</a>
     </nav>
     <div class="container">
-        <h2>Ratownicy z Malibu</h2>
-        <p>prace trwają
-		<p>
-		ogólnie zacząłem tworzyć gry tak tak pojebało mnie XD tu będą się pojawiać wszystkie (mniejsze) gry jakie stworzyłem miłej zabawy!
-		</p>
-    </div>
-	<div class="navbar">
-		<p>Sezon 1</p>
+        <h2>Cymbały z zakrętu</h2>
+        <p>
+		No a więc mój nowy projekt, zacząłem robić gry zobaczymy co z tego wyjdzie... miłego grania :P
+        </p>
+        <p>
+            Za szkody na psychice nie odpowiadam :3 
+        </p>
 
-		
-		
+        <!-- Sezon 1 -->
+        <div class="episodes">
+            <h2>WÓDKA CLICKER</h2>
+            <div class="episode">
+                <a href="https://drive.google.com/drive/folders/1B6c1G1vd9BoFvrF-dj1achz-iYcP2Bxl?usp=sharing">
+                    <img src="episode1.jpg" alt="Odcinek 1">
+                </a>
+                <div class="text">
+                    <p><strong>LUBELSKA CLICKER</strong></p>
+                    <p>moja pierwsza gra, Lubelska clicker polecam obczaić pooozdro</p>
+                </div>
+	    </div>
 	</div>
+    </div>
 </body>
 </html>
